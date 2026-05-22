@@ -1,0 +1,54 @@
+ARG BASE_VERSION=15
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+
+ARG FREEBSD_ARCH=amd64
+ARG UPSTREAM_URL="https://api.github.com/repos/syncthing/syncthing/releases/latest"
+ARG UPSTREAM_JQ=".tag_name"
+ARG HEALTHCHECK_ENDPOINT="http://localhost:8384/rest/noauth/health"
+
+ENV HEALTHCHECK_URL="${HEALTHCHECK_ENDPOINT}"
+ENV HOME="/config"
+
+# --- Metadata (Injected by Generator) ---
+LABEL org.opencontainers.image.title="{{ title }}" \
+      org.opencontainers.image.description="{{ description }}" \
+      org.opencontainers.image.source="{{ repo_url }}" \
+      org.opencontainers.image.url="{{ web_url }}" \
+      org.opencontainers.image.licenses="MPL-2.0" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.category="{{ category }}" \
+{%- if ports %}
+      io.daemonless.port="{{ ports[0].port }}" \
+{%- endif %}
+{%- if volumes %}
+      io.daemonless.volumes="{{ volumes | map(attribute='path') | join(',') }}" \
+{%- endif %}
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.upstream-url="${UPSTREAM_URL}" \
+      io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
+      io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}"
+
+# Download and install Syncthing from upstream releases
+RUN VERSION=$(fetch -qo - "${UPSTREAM_URL}" | jq -r '.tag_name') && \
+    fetch -qo - "https://github.com/syncthing/syncthing/releases/download/${VERSION}/syncthing-freebsd-${FREEBSD_ARCH}-${VERSION}.tar.gz" | \
+    tar xzf - -C /tmp && \
+    mv /tmp/syncthing-freebsd-${FREEBSD_ARCH}-${VERSION}/syncthing /usr/local/bin/syncthing && \
+    chmod +x /usr/local/bin/syncthing && \
+    mkdir -p /app && \
+    echo "${VERSION}" > /app/version && \
+    rm -rf /tmp/syncthing-*
+
+COPY root/ /
+
+RUN chmod +x /etc/services.d/syncthing/run /healthz
+
+# --- Expose (Injected by Generator) ---
+{%- if ports %}
+EXPOSE {{ ports | map(attribute='port') | join(' ') }}
+{%- endif %}
+
+# --- Volumes (Injected by Generator) ---
+{%- if volumes %}
+VOLUME {{ volumes | map(attribute='path') | join(' ') }}
+{%- endif %}

@@ -1,0 +1,17 @@
+build:
+  auto_version: true
+  variants:
+    - tag: latest
+      containerfile: Containerfile
+    - tag: pkg
+      containerfile: Containerfile.pkg
+    - tag: pkg-latest
+      containerfile: Containerfile.pkg
+      args:
+        BASE_VERSION: "15-latest"
+
+cit:
+  mode: screenshot
+  port: 8384
+  health: /rest/noauth/health
+  ready: "GUI and API listening"

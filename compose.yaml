@@ -1,0 +1,36 @@
+name: syncthing
+
+x-daemonless:
+  title: "Syncthing"
+  icon: ":simple-syncthing:"
+  category: "Network"
+  description: "Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet."
+  upstream_url: "https://github.com/syncthing/syncthing"
+  web_url: "https://syncthing.net/"
+  freshports_url: "https://www.freshports.org/net/syncthing/"
+  user: "bsd"
+  mlock: false
+  community: "Discord:https://discord.gg/Kb9tkhecZT"
+  appjail: true
+
+  docs:
+    volumes:
+      /config: "Configuration and data directory"
+    ports:
+      8384: "Web UI"
+      22000: "Sync protocol (TCP/UDP)"
+
+services:
+  syncthing:
+    image: ghcr.io/daemonless/syncthing:latest
+    container_name: syncthing
+    restart: unless-stopped
+
+    volumes:
+      - /path/to/containers/syncthing:/config
+
+    ports:
+      - 8384:8384
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp

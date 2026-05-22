@@ -1,0 +1,10 @@
+#!/bin/sh
+# Syncthing s6 service
+
+s6-ready-when fetch -qo /dev/null http://localhost:8384/rest/noauth/health
+
+exec s6-setuidgid bsd /usr/local/bin/syncthing \
+    --home=/config \
+    --no-browser \
+    --no-restart \
+    --gui-address=0.0.0.0:8384
