@@ -15,3 +15,4 @@ cit:
   port: 8384
   health: /rest/noauth/health
   ready: "GUI and API listening"
+  ssim_threshold: 0.85
