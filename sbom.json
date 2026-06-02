@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-25T15:23:21Z",
+  "generated": "2026-06-02T17:45:02Z",
   "image": "syncthing",
   "tags": {
     "latest": {
-      "app_version": "v2.1.0",
+      "app_version": "v2.1.1",
       "arch": "amd64",
-      "generated": "2026-05-25T15:22:00Z",
+      "generated": "2026-06-02T17:43:44Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -341,7 +341,7 @@
           },
           {
             "name": "github.com/syncthing/syncthing",
-            "version": "v2.1.0"
+            "version": "v2.1.1"
           },
           {
             "name": "github.com/syndtr/goleveldb",
@@ -381,11 +381,11 @@
           },
           {
             "name": "golang.org/x/net",
-            "version": "v0.54.0"
+            "version": "v0.55.0"
           },
           {
             "name": "golang.org/x/sys",
-            "version": "v0.44.0"
+            "version": "v0.45.0"
           },
           {
             "name": "golang.org/x/text",
@@ -448,7 +448,7 @@
     "pkg": {
       "app_version": "2.0.15_3",
       "arch": "amd64",
-      "generated": "2026-05-25T15:22:07Z",
+      "generated": "2026-06-02T17:43:50Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -903,7 +903,7 @@
     "pkg-latest": {
       "app_version": "2.1.0",
       "arch": "amd64",
-      "generated": "2026-05-25T15:21:52Z",
+      "generated": "2026-06-02T17:43:45Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
