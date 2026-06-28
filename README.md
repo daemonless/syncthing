@@ -18,7 +18,6 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 | **Website** | [https://syncthing.net/](https://syncthing.net/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Alternative build. |
@@ -26,7 +25,6 @@ Syncthing replaces proprietary sync and cloud services with something open, trus
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -36,29 +34,32 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   syncthing:
-    image: ghcr.io/daemonless/syncthing:latest
+    image: "ghcr.io/daemonless/syncthing:latest"
     container_name: syncthing
     volumes:
       - "/path/to/containers/syncthing:/config"
     ports:
-      - 8384:8384
-      - 22000:22000
-      - 22000:22000
-      - 21027:21027
+      - "8384:8384"
+      - "22000:22000"
+      - "22000:22000"
+      - "21027:21027"
     restart: unless-stopped
 ```
 
 ### AppJail Director
-
 **.env**:
 
 ```
+# .env
+
 DIRECTOR_PROJECT=syncthing
 ```
 
 **appjail-director.yml**:
 
 ```yaml
+# appjail-director.yml
+
 options:
   - virtualnet: ':<random> default'
   - nat:
@@ -67,6 +68,10 @@ services:
     name: syncthing
     options:
       - container: 'boot args:--pull'
+      - expose: '8384:8384 proto:tcp' \
+      - expose: '22000:22000 proto:tcp' \
+      - expose: '22000:22000 proto:udp' \
+      - expose: '21027:21027 proto:udp' \
     volumes:
       - syncthing: /config
 volumes:
@@ -77,11 +82,14 @@ volumes:
 **Makejail**:
 
 ```
+# Makejail
+
 ARG tag=latest
 
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/syncthing:${tag}
 ```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
 
@@ -95,13 +103,30 @@ podman run -d --name syncthing \
   ghcr.io/daemonless/syncthing:latest
 ```
 
+### AppJail
+
+```bash
+appjail oci run -Pd \
+  -o overwrite=force \
+  -o container="args:--pull" \
+  -o virtualnet=":<random> default" \
+  -o nat \
+  -o expose="8384:8384 proto:tcp" \
+  -o expose="22000:22000 proto:tcp" \
+  -o expose="22000:22000 proto:udp" \
+  -o expose="21027:21027 proto:udp" \
+  -o fstab="/path/to/containers/syncthing /config <pseudofs>" \
+  ghcr.io/daemonless/syncthing:latest syncthing
+```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
 ### Ansible
 
 ```yaml
 - name: Deploy syncthing
   containers.podman.podman_container:
     name: syncthing
-    image: ghcr.io/daemonless/syncthing:latest
+    image: "ghcr.io/daemonless/syncthing:latest"
     state: started
     restart_policy: always
     ports:
@@ -112,6 +137,8 @@ podman run -d --name syncthing \
     volumes:
       - "/path/to/containers/syncthing:/config"
 ```
+
+Access at: `http://localhost:8384`
 
 ## Parameters
 
@@ -132,7 +159,7 @@ podman run -d --name syncthing \
 
 **Architectures:** amd64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
-**Base:** FreeBSD 15.0
+**Base:** FreeBSD 15.1
 
 ---
 
