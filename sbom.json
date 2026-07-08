@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-28T22:45:06Z",
+  "generated": "2026-07-08T19:08:08Z",
   "image": "syncthing",
   "tags": {
     "latest": {
-      "app_version": "v2.1.1",
+      "app_version": "v2.1.2",
       "arch": "amd64",
-      "generated": "2026-06-28T22:43:47Z",
+      "generated": "2026-07-08T19:05:57Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -27,7 +27,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -99,7 +99,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -111,7 +111,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -119,7 +119,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -281,7 +281,7 @@
           },
           {
             "name": "github.com/pierrec/lz4/v4",
-            "version": "v4.1.26"
+            "version": "v4.1.27"
           },
           {
             "name": "github.com/pkg/errors",
@@ -313,7 +313,7 @@
           },
           {
             "name": "github.com/quic-go/quic-go",
-            "version": "v0.59.0"
+            "version": "v0.60.0"
           },
           {
             "name": "github.com/rcrowley/go-metrics",
@@ -333,7 +333,7 @@
           },
           {
             "name": "github.com/shirou/gopsutil/v4",
-            "version": "v4.26.4"
+            "version": "v4.26.5"
           },
           {
             "name": "github.com/stretchr/objx",
@@ -349,7 +349,7 @@
           },
           {
             "name": "github.com/syncthing/syncthing",
-            "version": "v2.1.1"
+            "version": "v2.1.2"
           },
           {
             "name": "github.com/syndtr/goleveldb",
@@ -381,23 +381,23 @@
           },
           {
             "name": "golang.org/x/crypto",
-            "version": "v0.51.0"
+            "version": "v0.53.0"
           },
           {
             "name": "golang.org/x/exp",
-            "version": "v0.0.0-20260508232706-74f9aab9d74a"
+            "version": "v0.0.0-20260611194520-c48552f49976"
           },
           {
             "name": "golang.org/x/net",
-            "version": "v0.55.0"
+            "version": "v0.56.0"
           },
           {
             "name": "golang.org/x/sys",
-            "version": "v0.45.0"
+            "version": "v0.46.0"
           },
           {
             "name": "golang.org/x/text",
-            "version": "v0.37.0"
+            "version": "v0.38.0"
           },
           {
             "name": "golang.org/x/time",
@@ -413,7 +413,7 @@
           },
           {
             "name": "modernc.org/libc",
-            "version": "v1.72.0"
+            "version": "v1.72.3"
           },
           {
             "name": "modernc.org/mathutil",
@@ -425,11 +425,11 @@
           },
           {
             "name": "modernc.org/sqlite",
-            "version": "v1.50.0"
+            "version": "v1.52.0"
           },
           {
             "name": "stdlib",
-            "version": "v1.26.3"
+            "version": "v1.26.5"
           }
         ],
         "java": [],
@@ -456,7 +456,7 @@
     "pkg": {
       "app_version": "2.0.15_4",
       "arch": "amd64",
-      "generated": "2026-06-28T22:42:10Z",
+      "generated": "2026-07-08T19:06:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -478,7 +478,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -550,7 +550,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -562,7 +562,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -570,7 +570,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -919,7 +919,7 @@
     "pkg-latest": {
       "app_version": "2.1.1_1",
       "arch": "amd64",
-      "generated": "2026-06-28T22:42:11Z",
+      "generated": "2026-07-08T19:05:47Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -941,7 +941,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -1013,7 +1013,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -1025,7 +1025,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -1033,7 +1033,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -1057,7 +1057,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "oniguruma",
