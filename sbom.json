@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-05T20:14:35Z",
+  "generated": "2026-08-07T08:29:50Z",
   "image": "syncthing",
   "tags": {
     "latest": {
       "app_version": "v2.1.3",
       "arch": "amd64",
-      "generated": "2026-08-05T20:13:06Z",
+      "generated": "2026-08-07T08:26:46Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -639,7 +639,7 @@
     "pkg": {
       "app_version": "2.1.2_2",
       "arch": "amd64",
-      "generated": "2026-08-05T20:13:10Z",
+      "generated": "2026-08-07T08:27:33Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1293,9 +1293,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "2.1.2_2",
+      "app_version": "2.1.3",
       "arch": "amd64",
-      "generated": "2026-08-05T20:13:00Z",
+      "generated": "2026-08-07T08:27:23Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1577,7 +1577,7 @@
               "MPL20"
             ],
             "name": "syncthing",
-            "version": "2.1.2_2"
+            "version": "2.1.3"
           }
         ],
         "go": [
@@ -1589,12 +1589,12 @@
           {
             "name": "github.com/Azure/go-ntlmssp",
             "purl": "",
-            "version": "v0.1.0"
+            "version": "v0.1.1"
           },
           {
             "name": "github.com/alecthomas/kong",
             "purl": "",
-            "version": "v1.15.0"
+            "version": "v1.16.0"
           },
           {
             "name": "github.com/aws/aws-sdk-go",
@@ -1624,7 +1624,7 @@
           {
             "name": "github.com/ccding/go-stun",
             "purl": "",
-            "version": "v0.1.5"
+            "version": "v0.1.6"
           },
           {
             "name": "github.com/cenkalti/backoff/v4",
@@ -1649,12 +1649,12 @@
           {
             "name": "github.com/go-asn1-ber/asn1-ber",
             "purl": "",
-            "version": "v1.5.8-0.20250403174932-29230038a667"
+            "version": "v1.5.8"
           },
           {
             "name": "github.com/go-ldap/ldap/v3",
             "purl": "",
-            "version": "v3.4.13"
+            "version": "v3.4.14"
           },
           {
             "name": "github.com/gofrs/flock",
@@ -1719,7 +1719,7 @@
           {
             "name": "github.com/mattn/go-sqlite3",
             "purl": "",
-            "version": "v1.14.45"
+            "version": "v1.14.48"
           },
           {
             "name": "github.com/maxmind/geoipupdate/v6",
@@ -1769,7 +1769,7 @@
           {
             "name": "github.com/prometheus/client_golang",
             "purl": "",
-            "version": "v1.23.2"
+            "version": "v1.24.0"
           },
           {
             "name": "github.com/prometheus/client_model",
@@ -1779,12 +1779,12 @@
           {
             "name": "github.com/prometheus/common",
             "purl": "",
-            "version": "v0.66.1"
+            "version": "v0.70.0"
           },
           {
             "name": "github.com/prometheus/procfs",
             "purl": "",
-            "version": "v0.16.1"
+            "version": "v0.21.1"
           },
           {
             "name": "github.com/puzpuzpuz/xsync/v3",
@@ -1799,7 +1799,7 @@
           {
             "name": "github.com/rabbitmq/amqp091-go",
             "purl": "",
-            "version": "v1.11.0"
+            "version": "v1.13.0"
           },
           {
             "name": "github.com/rcrowley/go-metrics",
@@ -1819,7 +1819,7 @@
           {
             "name": "github.com/shirou/gopsutil/v4",
             "purl": "",
-            "version": "v4.26.5"
+            "version": "v4.26.6"
           },
           {
             "name": "github.com/stretchr/objx",
@@ -1872,39 +1872,34 @@
             "version": "v0.4.0"
           },
           {
-            "name": "go.yaml.in/yaml/v2",
-            "purl": "",
-            "version": "v2.4.2"
-          },
-          {
             "name": "golang.org/x/crypto",
             "purl": "",
-            "version": "v0.53.0"
+            "version": "v0.54.0"
           },
           {
             "name": "golang.org/x/exp",
             "purl": "",
-            "version": "v0.0.0-20260611194520-c48552f49976"
+            "version": "v0.0.0-20260718201538-764159d718ef"
           },
           {
             "name": "golang.org/x/net",
             "purl": "",
-            "version": "v0.56.0"
+            "version": "v0.57.0"
           },
           {
             "name": "golang.org/x/sync",
             "purl": "",
-            "version": "v0.21.0"
+            "version": "v0.22.0"
           },
           {
             "name": "golang.org/x/sys",
             "purl": "",
-            "version": "v0.46.0"
+            "version": "v0.47.0"
           },
           {
             "name": "golang.org/x/text",
             "purl": "",
-            "version": "v0.38.0"
+            "version": "v0.40.0"
           },
           {
             "name": "golang.org/x/time",
@@ -1938,14 +1933,14 @@
       "summary": {
         "dotnet": 0,
         "freebsd": 40,
-        "go": 69,
+        "go": 68,
         "java": 0,
         "node": 0,
         "php": 0,
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 109
+        "total": 108
       }
     }
   }
