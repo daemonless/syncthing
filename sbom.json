@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-24T14:09:26Z",
+  "generated": "2026-09-05T13:38:53Z",
   "image": "syncthing",
   "tags": {
     "latest": {
       "app_version": "v2.1.3",
       "arch": "amd64",
-      "generated": "2026-08-24T14:07:15Z",
+      "generated": "2026-09-05T13:37:15Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -147,7 +147,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -175,7 +175,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -238,7 +238,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.126.1"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -639,7 +639,7 @@
     "pkg": {
       "app_version": "2.1.2_4",
       "arch": "amd64",
-      "generated": "2026-08-24T14:07:24Z",
+      "generated": "2026-09-05T13:38:18Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -781,7 +781,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -809,7 +809,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -872,7 +872,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.126.1"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -1295,7 +1295,7 @@
     "pkg-latest": {
       "app_version": "2.1.3_2",
       "arch": "amd64",
-      "generated": "2026-08-24T14:08:50Z",
+      "generated": "2026-09-05T13:37:26Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1437,7 +1437,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -1465,7 +1465,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -1528,7 +1528,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.126.1"
+            "version": "3.127"
           },
           {
             "licenses": [

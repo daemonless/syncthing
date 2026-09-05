@@ -43,8 +43,11 @@ services:
       - "22000:22000"
       - "22000:22000"
       - "21027:21027"
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### AppJail Director
 **.env**:
@@ -89,6 +92,9 @@ ARG tag=latest
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/syncthing:${tag}
 ```
+
+Save the files above, then run `appjail-director up`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
@@ -102,6 +108,8 @@ podman run -d --name syncthing \
   -v /path/to/containers/syncthing:/config \
   ghcr.io/daemonless/syncthing:latest
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
@@ -118,7 +126,31 @@ appjail oci run -Pd \
   -o fstab="/path/to/containers/syncthing /config <pseudofs>" \
   ghcr.io/daemonless/syncthing:latest syncthing
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  syncthing:
+    image: "ghcr.io/daemonless/syncthing:latest"
+    container_name: syncthing
+    network_mode: host  # jail shares host networking
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  --data-path /path/to/containers/syncthing \
+  syncthing ghcr.io/daemonless/syncthing:latest inherit
+```
 
 ### Ansible
 
@@ -137,6 +169,8 @@ appjail oci run -Pd \
     volumes:
       - "/path/to/containers/syncthing:/config"
 ```
+
+Save as `syncthing-deploy.yaml`, then run `ansible-playbook syncthing-deploy.yaml`.
 
 Access at: `http://localhost:8384`
 
