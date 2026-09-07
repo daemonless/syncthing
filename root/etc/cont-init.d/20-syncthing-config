@@ -1,0 +1,8 @@
+#!/bin/sh
+# First boot: pre-generate config with usage reporting declined so the GUI
+# never shows the blocking usage-reporting dialog (racy in CIT screenshots)
+
+if [ ! -f /config/config.xml ]; then
+    s6-setuidgid bsd /usr/local/bin/syncthing generate --home=/config
+    sed -i '' 's|<urAccepted>0</urAccepted>|<urAccepted>-1</urAccepted>|' /config/config.xml
+fi

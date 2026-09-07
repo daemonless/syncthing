@@ -43,7 +43,7 @@ RUN VERSION=$(fetch -qo - "${UPSTREAM_URL}" | jq -r '.tag_name') && \
 
 COPY root/ /
 
-RUN chmod +x /etc/services.d/syncthing/run /healthz
+RUN chmod +x /etc/services.d/syncthing/run /etc/cont-init.d/20-syncthing-config /healthz
 
 # --- Expose (Injected by Generator) ---
 EXPOSE 8384 22000 22000 21027
