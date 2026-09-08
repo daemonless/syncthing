@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-07T08:27:44Z",
+  "generated": "2026-09-08T12:35:27Z",
   "image": "syncthing",
   "tags": {
     "latest": {
-      "app_version": "v2.1.3",
+      "app_version": "v2.1.5",
       "arch": "amd64",
-      "generated": "2026-09-07T08:25:56Z",
+      "generated": "2026-09-08T12:34:19Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -297,7 +297,7 @@
           {
             "name": "github.com/alecthomas/kong",
             "purl": "",
-            "version": "v1.16.0"
+            "version": "v1.16.1"
           },
           {
             "name": "github.com/beorn7/perks",
@@ -333,11 +333,6 @@
             "name": "github.com/cpuguy83/go-md2man/v2",
             "purl": "",
             "version": "v2.0.7"
-          },
-          {
-            "name": "github.com/davecgh/go-spew",
-            "purl": "",
-            "version": "v1.1.1"
           },
           {
             "name": "github.com/dustin/go-humanize",
@@ -385,6 +380,11 @@
             "version": "v2.0.7"
           },
           {
+            "name": "github.com/jackpal/gateway",
+            "purl": "",
+            "version": "v1.2.0"
+          },
+          {
             "name": "github.com/jackpal/go-nat-pmp",
             "purl": "",
             "version": "v1.0.2"
@@ -405,14 +405,9 @@
             "version": "v0.0.0-20180428030007-95032a82bc51"
           },
           {
-            "name": "github.com/marbens-arch/gateway",
-            "purl": "",
-            "version": "v1.1.2-0.20260308173556-c567cc04e7d4"
-          },
-          {
             "name": "github.com/mattn/go-isatty",
             "purl": "",
-            "version": "v0.0.20"
+            "version": "v0.0.24"
           },
           {
             "name": "github.com/miscreant/miscreant.go",
@@ -432,17 +427,12 @@
           {
             "name": "github.com/pierrec/lz4/v4",
             "purl": "",
-            "version": "v4.1.27"
+            "version": "v4.1.29"
           },
           {
             "name": "github.com/pkg/errors",
             "purl": "",
             "version": "v0.9.1"
-          },
-          {
-            "name": "github.com/pmezard/go-difflib",
-            "purl": "",
-            "version": "v1.0.0"
           },
           {
             "name": "github.com/posener/complete",
@@ -452,7 +442,7 @@
           {
             "name": "github.com/prometheus/client_golang",
             "purl": "",
-            "version": "v1.24.0"
+            "version": "v1.24.1"
           },
           {
             "name": "github.com/prometheus/client_model",
@@ -462,7 +452,7 @@
           {
             "name": "github.com/prometheus/common",
             "purl": "",
-            "version": "v0.70.0"
+            "version": "v0.70.1"
           },
           {
             "name": "github.com/prometheus/procfs",
@@ -472,7 +462,7 @@
           {
             "name": "github.com/quic-go/quic-go",
             "purl": "",
-            "version": "v0.60.0"
+            "version": "v0.61.0"
           },
           {
             "name": "github.com/rcrowley/go-metrics",
@@ -497,17 +487,7 @@
           {
             "name": "github.com/shirou/gopsutil/v4",
             "purl": "",
-            "version": "v4.26.6"
-          },
-          {
-            "name": "github.com/stretchr/objx",
-            "purl": "",
-            "version": "v0.5.2"
-          },
-          {
-            "name": "github.com/stretchr/testify",
-            "purl": "",
-            "version": "v1.11.1"
+            "version": "v4.26.7"
           },
           {
             "name": "github.com/syncthing/notify",
@@ -517,7 +497,7 @@
           {
             "name": "github.com/syncthing/syncthing",
             "purl": "",
-            "version": "v2.1.3"
+            "version": "v2.1.5"
           },
           {
             "name": "github.com/syndtr/goleveldb",
@@ -552,17 +532,17 @@
           {
             "name": "golang.org/x/crypto",
             "purl": "",
-            "version": "v0.54.0"
+            "version": "v0.55.0"
           },
           {
             "name": "golang.org/x/exp",
             "purl": "",
-            "version": "v0.0.0-20260718201538-764159d718ef"
+            "version": "v0.0.0-20260813180055-c1d0aacb2297"
           },
           {
             "name": "golang.org/x/net",
             "purl": "",
-            "version": "v0.57.0"
+            "version": "v0.58.0"
           },
           {
             "name": "golang.org/x/sys",
@@ -572,7 +552,7 @@
           {
             "name": "golang.org/x/text",
             "purl": "",
-            "version": "v0.40.0"
+            "version": "v0.41.0"
           },
           {
             "name": "golang.org/x/time",
@@ -582,17 +562,12 @@
           {
             "name": "google.golang.org/protobuf",
             "purl": "",
-            "version": "v1.36.11"
-          },
-          {
-            "name": "gopkg.in/yaml.v3",
-            "purl": "",
-            "version": "v3.0.1"
+            "version": "v1.36.12"
           },
           {
             "name": "modernc.org/libc",
             "purl": "",
-            "version": "v1.74.1"
+            "version": "v1.74.4"
           },
           {
             "name": "modernc.org/mathutil",
@@ -607,12 +582,12 @@
           {
             "name": "modernc.org/sqlite",
             "purl": "",
-            "version": "v1.54.0"
+            "version": "v1.57.0"
           },
           {
             "name": "stdlib",
             "purl": "",
-            "version": "v1.26.5"
+            "version": "v1.27.1"
           }
         ],
         "java": [],
@@ -626,20 +601,20 @@
       "summary": {
         "dotnet": 0,
         "freebsd": 39,
-        "go": 66,
+        "go": 61,
         "java": 0,
         "node": 0,
         "php": 0,
         "python": 0,
         "ruby": 0,
         "rust": 0,
-        "total": 105
+        "total": 100
       }
     },
     "pkg": {
       "app_version": "2.1.2_4",
       "arch": "amd64",
-      "generated": "2026-09-07T08:25:48Z",
+      "generated": "2026-09-08T12:34:11Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1295,7 +1270,7 @@
     "pkg-latest": {
       "app_version": "2.1.3_3",
       "arch": "amd64",
-      "generated": "2026-09-07T08:27:06Z",
+      "generated": "2026-09-08T12:34:50Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
