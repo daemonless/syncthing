@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/syncthing/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/syncthing/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/syncthing?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/syncthing/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/syncthing?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/syncthing)
 
 Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and you deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.
 
