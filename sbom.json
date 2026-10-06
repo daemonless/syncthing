@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-29T20:25:09Z",
+  "generated": "2026-10-06T07:40:05Z",
   "image": "syncthing",
   "tags": {
     "latest": {
-      "app_version": "v2.1.5",
+      "app_version": "v2.1.6",
       "arch": "amd64",
-      "generated": "2026-09-29T20:23:46Z",
+      "generated": "2026-10-06T07:38:24Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -511,7 +511,7 @@
           {
             "name": "github.com/syncthing/syncthing",
             "purl": "",
-            "version": "v2.1.5"
+            "version": "v2.1.6"
           },
           {
             "name": "github.com/syndtr/goleveldb",
@@ -628,7 +628,7 @@
     "pkg": {
       "app_version": "2.1.2_4",
       "arch": "amd64",
-      "generated": "2026-09-29T20:24:11Z",
+      "generated": "2026-10-06T07:39:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1298,7 +1298,7 @@
     "pkg-latest": {
       "app_version": "2.1.5",
       "arch": "amd64",
-      "generated": "2026-09-29T20:24:31Z",
+      "generated": "2026-10-06T07:39:31Z",
       "packages": {
         "dotnet": [],
         "freebsd": [

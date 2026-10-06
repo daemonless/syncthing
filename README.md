@@ -38,7 +38,7 @@ services:
     image: "ghcr.io/daemonless/syncthing:latest"
     container_name: syncthing
     volumes:
-      - "/path/to/containers/syncthing:/config"
+      - "/containers/syncthing:/config"
     ports:
       - "8384:8384"
       - "22000:22000"
@@ -80,7 +80,7 @@ services:
       - syncthing: /config
 volumes:
   syncthing:
-    device: '/path/to/containers/syncthing'
+    device: '/containers/syncthing'
 ```
 
 **Makejail**:
@@ -103,45 +103,6 @@ Save the files above, then run `appjail-director up`.
 >
 > To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
 
-### Podman CLI
-
-```bash
-podman run -d --name syncthing \
-  -p 8384:8384 \
-  -p 22000:22000 \
-  -p 22000:22000 \
-  -p 21027:21027 \
-  -v /path/to/containers/syncthing:/config \
-  ghcr.io/daemonless/syncthing:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o expose="8384:8384 proto:tcp" \
-  -o expose="22000:22000 proto:tcp" \
-  -o expose="22000:22000 proto:udp" \
-  -o expose="21027:21027 proto:udp" \
-  -o fstab="/path/to/containers/syncthing /config <pseudofs>" \
-  ghcr.io/daemonless/syncthing:latest syncthing
-```
-
-Save the files above, then run `sh run.sh`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
 ### Bastille
 
 > [!WARNING]
@@ -155,36 +116,10 @@ services:
     network:
       - mode: host
     volumes:
-      - "/path/to/containers/syncthing:/config"
+      - "/containers/syncthing:/config"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --volume /path/to/containers/syncthing /config \
-  syncthing ghcr.io/daemonless/syncthing:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy syncthing
-  containers.podman.podman_container:
-    name: syncthing
-    image: "ghcr.io/daemonless/syncthing:latest"
-    state: started
-    restart_policy: always
-    ports:
-      - "8384:8384"
-      - "22000:22000"
-      - "22000:22000"
-      - "21027:21027"
-    volumes:
-      - "/path/to/containers/syncthing:/config"
-```
-
-Save as `syncthing-deploy.yaml`, then run `ansible-playbook syncthing-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 Access at: `http://localhost:8384`
 
