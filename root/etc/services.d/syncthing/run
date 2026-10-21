@@ -7,4 +7,5 @@ exec s6-setuidgid bsd /usr/local/bin/syncthing \
     --home=/config \
     --no-browser \
     --no-restart \
+    --no-upgrade \
     --gui-address=0.0.0.0:8384
