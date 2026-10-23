@@ -5,7 +5,7 @@
 # --------------------------------------------------------------------------
 
 ARG BASE_VERSION=15.1
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME=syncthing
@@ -35,8 +35,11 @@ RUN pkg update && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/*
 
 COPY root/ /
+RUN chmod +x /daemonless/libexec/syncthing /daemonless/init.d/*
 
-RUN chmod +x /etc/services.d/syncthing/run /etc/cont-init.d/20-syncthing-config /healthz
+CMD ["/daemonless/libexec/syncthing"]
+
+RUN chmod +x /healthz
 
 # --- Expose (Injected by Generator) ---
 EXPOSE 8384 22000 22000 21027
