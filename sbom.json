@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-23T22:09:22Z",
+  "generated": "2026-11-02T00:36:54Z",
   "image": "syncthing",
   "tags": {
     "latest": {
       "app_version": "v2.1.7",
       "arch": "amd64",
-      "generated": "2026-10-23T22:01:01Z",
+      "generated": "2026-11-02T00:35:09Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -252,7 +252,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -647,7 +647,7 @@
     "pkg": {
       "app_version": "2.1.5_2",
       "arch": "amd64",
-      "generated": "2026-10-23T22:01:29Z",
+      "generated": "2026-11-02T00:35:43Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -831,7 +831,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -894,7 +894,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -1266,7 +1266,7 @@
     "pkg-latest": {
       "app_version": "2.1.7",
       "arch": "amd64",
-      "generated": "2026-10-23T22:02:53Z",
+      "generated": "2026-11-02T00:36:18Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1450,7 +1450,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -1513,7 +1513,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
