@@ -42,8 +42,8 @@ services:
     ports:
       - "8384:8384"
       - "22000:22000"
-      - "22000:22000"
-      - "21027:21027"
+      - "22000:22000/udp"
+      - "21027:21027/udp"
     # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
     restart: always
 ```

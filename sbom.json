@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-02T00:36:54Z",
+  "generated": "2026-11-04T17:55:46Z",
   "image": "syncthing",
   "tags": {
     "latest": {
       "app_version": "v2.1.7",
       "arch": "amd64",
-      "generated": "2026-11-02T00:35:09Z",
+      "generated": "2026-11-04T17:54:59Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -647,7 +647,7 @@
     "pkg": {
       "app_version": "2.1.5_2",
       "arch": "amd64",
-      "generated": "2026-11-02T00:35:43Z",
+      "generated": "2026-11-04T17:52:49Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1266,7 +1266,7 @@
     "pkg-latest": {
       "app_version": "2.1.7",
       "arch": "amd64",
-      "generated": "2026-11-02T00:36:18Z",
+      "generated": "2026-11-04T17:52:45Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
