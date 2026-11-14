@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-13T23:42:42Z",
+  "generated": "2026-11-14T22:36:07Z",
   "image": "syncthing",
   "tags": {
     "latest": {
       "app_version": "v2.1.7",
       "arch": "amd64",
-      "generated": "2026-11-13T23:41:35Z",
+      "generated": "2026-11-14T22:34:48Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -647,7 +647,7 @@
     "pkg": {
       "app_version": "2.1.5_2",
       "arch": "amd64",
-      "generated": "2026-11-13T23:42:15Z",
+      "generated": "2026-11-14T22:35:34Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1264,9 +1264,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "2.1.7",
+      "app_version": "2.1.7_1",
       "arch": "amd64",
-      "generated": "2026-11-13T23:41:08Z",
+      "generated": "2026-11-14T22:35:38Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1541,7 +1541,7 @@
               "MPL20"
             ],
             "name": "syncthing",
-            "version": "2.1.7"
+            "version": "2.1.7_1"
           }
         ],
         "go": [
@@ -1898,7 +1898,7 @@
           {
             "name": "stdlib",
             "purl": "",
-            "version": "v1.27.3"
+            "version": "v1.27.4"
           }
         ],
         "java": [],
